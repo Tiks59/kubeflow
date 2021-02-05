@@ -88,5 +88,5 @@ spec:
     name: spartakus
   repos:
   - name: manifests
-    uri: https://github.com/Tiks59/kubeflow/blob/main/v1.2.1.tar.gz?raw=true
+    uri: https://github.com/Tiks59/kubeflow/blob/main/v1.2.2.tar.gz?raw=true
   version: v1.2-branch
