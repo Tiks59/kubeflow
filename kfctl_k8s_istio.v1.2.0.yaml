@@ -59,11 +59,11 @@ spec:
         name: manifests
         path: admission-webhook/bootstrap/overlays/application
     name: bootstrap
- # - kustomizeConfig:
- #     repoRef:
- #       name: manifests
- #       path: stacks/kubernetes/application/spark-operator
- #   name: spark-operator
+  - kustomizeConfig:
+      repoRef:
+        name: manifests
+        path: stacks/kubernetes/application/spark-operator
+    name: spark-operator
   - kustomizeConfig:
       repoRef:
         name: manifests
