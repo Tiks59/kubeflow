@@ -26,6 +26,7 @@ spec:
         value: kubeflow-userid
       overlays:
       - application
+      - istio
       repoRef:
         name: manifests
         path: jupyter/jupyter-web-app
@@ -33,6 +34,7 @@ spec:
   - kustomizeConfig:
       overlays:
       - application
+      - istio
       repoRef:
         name: manifests
         path: jupyter/notebook-controller
