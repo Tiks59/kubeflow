@@ -14,12 +14,12 @@ spec:
          path: application/application-crds
      name: application-crds
    - kustomizeConfig:
-      overlays:
-      - application
-      repoRef:
-        name: manifests
-        path: application/application
-    name: application
+       overlays:
+       - application
+       repoRef:
+         name: manifests
+         path: application/application
+     name: application
 #   - kustomizeConfig:
 #       repoRef:
 #         name: manifests
