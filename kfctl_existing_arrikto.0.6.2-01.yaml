@@ -105,7 +105,7 @@ spec:
 #         name: manifests
 #         path: katib-v1alpha2/suggestion
 #     name: suggestion
-#   - kustomizeConfig:
+  - kustomizeConfig:
       overlays:
       # - istio
       - application
