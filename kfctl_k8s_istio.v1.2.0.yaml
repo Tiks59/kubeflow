@@ -1,6 +1,11 @@
 apiVersion: kfdef.apps.kubeflow.org/v1
 kind: KfDef
 metadata:
+  annotations:
+    kfctl.kubeflow.io/force-delete: "false"
+  clusterName: internalCluster
+  creationTimestamp: null
+  name: kubeflow
   namespace: kubeflow
 spec:
   applications:
@@ -49,21 +54,11 @@ spec:
         name: manifests
         path: stacks/kubernetes/application/add-anonymous-user-filter
     name: add-anonymous-user-filter
-#  - kustomizeConfig:
-#      repoRef:
-#        name: manifests
-#        path: metacontroller/base
-#    name: metacontroller
   - kustomizeConfig:
       repoRef:
         name: manifests
         path: admission-webhook/bootstrap/overlays/application
     name: bootstrap
-#  - kustomizeConfig:
-#      repoRef:
-#        name: manifests
-#        path: stacks/kubernetes/application/spark-operator
-#    name: spark-operator
   - kustomizeConfig:
       repoRef:
         name: manifests
@@ -79,14 +74,15 @@ spec:
         name: manifests
         path: kfserving/installs/generic
     name: kfserving
-  # Spartakus is a separate applications so that kfctl can remove it
-  # to disable usage reporting
-#  - kustomizeConfig:
-#      repoRef:
-#        name: manifests
-#        path: stacks/kubernetes/application/spartakus
-#    name: spartakus
   repos:
   - name: manifests
-    uri: /Users/dalfos/work/kubeflow/manifests_my/v1.2.0_petrov.tar.gz
+    uri: /tmp/v1.2.0_petrov.tar.gz
   version: v1.2-branch
+status:
+  reposCache:
+  - localPath: '".cache/manifests"'
+    name: manifests
+  - localPath: '".cache/manifests"'
+    name: manifests
+  - localPath: '".cache/manifests"'
+    name: manifests
